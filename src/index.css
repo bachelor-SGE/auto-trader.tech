@@ -1,0 +1,89 @@
+/* Темная тема: переменные */
+:root {
+  --color-bg: #181c23;
+  --color-bg-secondary: #232834;
+  --color-card: #232834;
+  --color-border: #2c3140;
+  --color-primary: #4f8cff;
+  --color-primary-hover: #3570d4;
+  --color-accent: #ffb300;
+  --color-danger: #e74c3c;
+  --color-success: #27ae60;
+  --color-text: #e6eaf3;
+  --color-text-secondary: #b0b8c9;
+  --color-text-muted: #7a8192;
+  --color-shadow: 0 2px 16px #000a;
+  --radius: 12px;
+  --font-main: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  font-size: 16px;
+  min-height: 100vh;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: var(--color-bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 8px;
+}
+
+input, select, textarea, button {
+  font-family: var(--font-main);
+  background: var(--color-bg-secondary);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary-hover)33;
+}
+
+button {
+  cursor: pointer;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: var(--color-shadow);
+}
+button:hover {
+  background: var(--color-primary-hover);
+}
+
+.card {
+  background: var(--color-card);
+  border-radius: var(--radius);
+  box-shadow: var(--color-shadow);
+  border: 1px solid var(--color-border);
+  padding: 24px;
+}
+
+::-webkit-input-placeholder { color: var(--color-text-muted); }
+::-moz-placeholder { color: var(--color-text-muted); }
+:-ms-input-placeholder { color: var(--color-text-muted); }
+::placeholder { color: var(--color-text-muted); } 
